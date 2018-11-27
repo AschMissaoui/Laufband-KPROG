@@ -20,10 +20,10 @@ public class Simulation {
 	public static boolean isRunning = false;  
 	
 	/** a speed factor for the clock to vary the speed of the clock in a simple way*/
-	public static int SPEEDFACTOR = 2;
+	public static int SPEEDFACTOR = 1;
 	
 	/**the beat or speed of the clock, e.g. 300 means one beat every 300 milli seconds*/
-	public static final int CLOCKBEAT = 20 * SPEEDFACTOR;
+	public static final int CLOCKBEAT = 100 * SPEEDFACTOR;
 	
 	/**the global clock */
 	//the clock must be thread safe -> AtomicLong. The primitive type long isn't, even if synchronized

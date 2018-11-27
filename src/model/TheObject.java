@@ -217,7 +217,7 @@ import javax.swing.*;
 
 
 			//let the object move to the chosen station
-			if (!(station == null)){
+
 			Statistics.show(this.getLabel() + " geht zur " + station.getLabel());
 			
 			//while target is not achieved 
@@ -231,7 +231,7 @@ import javax.swing.*;
 	 			if(station.getYPos() < this.yPos) this.yPos--;	
 	 			
 	 			//set our view to the new position
-				((Component) theView).setLocation(this.xPos, this.yPos);	}
+				((Component) theView).setLocation(this.xPos, this.yPos);
 				
 				//let the thread sleep for the sequence time
 				try {
