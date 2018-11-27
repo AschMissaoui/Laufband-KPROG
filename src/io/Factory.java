@@ -8,6 +8,7 @@ import model.ProcessStation;
 import model.StartStation;
 import model.SynchronizedQueue;
 import model.TheObject;
+
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -25,7 +26,7 @@ public class Factory {
     /**
 	* the scenario we want to test
 	*/
-	private static final String CHOSEN_SCENARIO = "Szenario 1";
+	private static final String CHOSEN_SCENARIO = "Szenario 2";
 	
 	/** the objects XML data file */
 	private static String theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml"; 
@@ -82,6 +83,7 @@ public class Factory {
     		
     		//get the label
     		String label = startStation.getChildText("label");
+    		
     		    		    		
     		//get the position
     		XPOS_STARTSTATION = Integer.parseInt(startStation.getChildText("x_position"));
@@ -150,6 +152,9 @@ public class Factory {
     			int processtime = 0;
     			int speed = 0;
     			String image = null;
+    			String type = "";	//new type variable that was added
+    			
+
     			    			
     			// read data
     			label = theObject.getChildText("label");
@@ -160,6 +165,10 @@ public class Factory {
         		Element viewGroup = theObject.getChild("view");
         		// read data
         		image = viewGroup.getChildText("image");
+        		
+        		type = theObject.getChildText("type");
+        		System.out.println(label+"++++++++++++++++++++++++++"+type+"++++++++++++++++");
+        		
         		
         		//get all the stations, where the object wants to go to
         		//the <sequence> ... </sequence> node
@@ -177,7 +186,7 @@ public class Factory {
         		}
         	  		
         		//creating a new TheObject object
-        		TheObject.create(label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+        		TheObject.create(type, label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
         		
 			}
     	

@@ -12,21 +12,30 @@ import controller.Simulation;
 /**
  * Class for the objects
  * 
- * @author Jaeger, Schmidt
- * @version 2016-07-08
+ * @author Jaeger, Schmidt, Team15
+ * @version 2016-07-08 
+ * 
  */
 	
 	public class TheObject extends Actor {
 		/*Counter for Hammers*/
 	    public static int numHammers = 0 ;
-		/*reference aud the end station*/
+	    /*Counters for Wood and Metal*/
+	public static int numWood =0 , numMetal = 0;
+		/*reference and the end station*/
 		private final String endStation = "End_Station";
+		/*reference and the first material type*/
+		public final String TYPE1 = "wood";
+		/*reference and the second material type*/
+		public final String TYPE2 = "metal";
 		
 		/** the view of the object */
 		public TheObjectView theView;
 		
 		/** the process time of the object*/
 		private int processTime;
+		
+		private String myType;
 		
 		/** the speed of the object, the higher the lower */
 		private int mySpeed;
@@ -57,7 +66,7 @@ import controller.Simulation;
 		 * @param yPos y position of the object
 		 * @param image image of the object
 		 */
-		private TheObject(String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
+		private TheObject(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
 			super(label, xPos, yPos);
 			
 			//create the view
@@ -68,6 +77,8 @@ import controller.Simulation;
 			this.stationsToGo = stationsToGo;
 			this.processTime = processtime;
 			this.mySpeed = speed;
+			this.myType = type;
+
 						
 			//the first station to go to is the start station
 			Station station = this.getNextStation();
@@ -79,6 +90,7 @@ import controller.Simulation;
 		
 		/** Create a new object model
 		 *
+		 * @param type of the object
 		 * @param label of the object 
 		 * @param stationsToGo the stations to go
 		 * @param processtime the processing time of the object, affects treatment by a station
@@ -87,9 +99,9 @@ import controller.Simulation;
 		 * @param yPos y position of the object
 		 * @param image image of the object
 		 */
-		public static void create(String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
+		public static void create(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
 				
-			new TheObject(label, stationsToGo, processtime, speed, xPos, yPos, image);
+			new TheObject(type, label, stationsToGo, processtime, speed, xPos, yPos, image);
 				
 		}
 					
@@ -128,18 +140,20 @@ import controller.Simulation;
 			//there is just one queue, enter it
 			if(inQueues.size()==1) inQueues.get(0).offer(this);
 			
-			/*enterInQueue is EDITED*/
+			/**
+			 * enterInQueue is EDITED by @author Team15
+			 * */
 			//When materials enters the Assembly they would split in 2 Queues depending on image
 			else if(station.label.equals("Assembly")) {
-				//if this object is a wood object, it goes into into the left queue
-				if(this.theView.getIcon().toString().equals("handle.png")){
+				if(getType(TYPE1)){
 				inQueues.get(0).offer(this);
-					this.theView.setIcon(null);
-				}
-                //if this object is a lead object, it goes into into the right queue
-				else if(this.theView.getIcon().toString().equals("head.png")){
-					inQueues.get(1).offer(this);
 
+					numWood++;
+				}
+				
+				else if(getType(TYPE2)){
+					inQueues.get(1).offer(this);
+					numMetal++;
 				}
 				else {
 					System.out.println("Wrong station.");
@@ -167,6 +181,17 @@ import controller.Simulation;
 			
 			//there is just one queue, enter it
 			if(outQueues.size()==1) outQueues.get(0).offer(this);
+
+			/**
+			 * enterInQueue is EDITED by @author Team15
+			 * */
+				//When materials enters the Assembly they would split in 2 Queues depending on image
+			else if(station.label.equals("Assembly")) {
+				if(getType(TYPE1)) {
+
+					this.theView.setIcon(null);
+
+				}}
 			
 			//Do we have more than one outgoing queue?
 			//We have to make a decision which queue we choose -> your turn 
@@ -206,22 +231,23 @@ import controller.Simulation;
 			if(station == null)
 			{ 
 				this.theView.setIcon(null);
-				
+
 	
 				return false;
 			}
 
 			
-			else if(station.label.equals(endStation)) {
+			else if(station.label.equals("Transport")) {
 				
 				String image = "hammer.png";
 				ImageIcon imageIcon = new ImageIcon(image);
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
 				numHammers ++ ;
+
 			}
-			
-			else if(station.label.equals("Assembly") && this.theView.getIcon().toString().equals("metal.png")) {
+															
+			else if(station.label.equals("Assembly") && getType(TYPE2)) {
 				
 				String image = "head.png";
 				ImageIcon imageIcon = new ImageIcon(image);
@@ -230,13 +256,15 @@ import controller.Simulation;
 				
 			}
 			
-			else if(station.label.equals("Assembly") && this.theView.getIcon().toString().equals("wood.png")) {
-				
+			else if(station.label.equals("Assembly") && getType(TYPE1)) {
 				String image = "handle.png";
 				ImageIcon imageIcon = new ImageIcon(image);
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
 				
+			}
+			if (station.label.equals(endStation)){
+				this.theView.setIcon(null);
 			}
 					
 			//let the object move to the chosen station
@@ -328,6 +356,35 @@ import controller.Simulation;
 		 */
 		public int getProcessTime() {
 			return processTime;
+		}
+		
+
+		
+		/**
+		 * made by Team 15
+		 * This method returns type of the current Object as String
+		 * 
+		 * @return myType as String
+		 */
+		public String getType()
+		{
+			return myType;
+		}
+		
+		/**
+		 * made by Team 15
+		 * This method checks if the type of the object is equals given type
+		 * 
+		 * @param type als String
+		 * @return boolean 
+		 */
+		public boolean getType(String type)
+		{
+			if(getType().equals(type))
+			{
+				return true;
+			}
+			return false;
 		}
 		
 	}

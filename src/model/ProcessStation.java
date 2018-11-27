@@ -177,7 +177,22 @@ public class ProcessStation extends Station {
 		measurement.inUseTime = measurement.inUseTime + elapsedTime; 
 						
 		//the treatment is over, now the object chooses an outgoing queue and enter it
-		theObject.enterOutQueue(this);
+		if (this.getLabel().equals("Assembly")){
+			if (theObject.numMetal>=1 && theObject.numWood>=1){
+				notify();
+				theObject.enterOutQueue(this);
+				if(theObject.getType().equals("metal")){theObject.numMetal-- ;
+				theObject.numWood--;}
+			}
+			else if (theObject.numMetal<1 || theObject.numWood<1) {
+				try {
+					theObject.wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				handleObject(theObject);
+			}
+		} else if (!(this.getLabel().equals("Assembly")))theObject.enterOutQueue(this);
 			
 		//just to see the view of the outgoing queue works
 		try {

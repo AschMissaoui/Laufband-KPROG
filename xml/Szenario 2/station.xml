@@ -2,7 +2,7 @@
 <settings>
 	<station>
 		<label>WoodCutter</label>
-		<troughput>5</troughput>
+		<troughput>10</troughput>
 		<x_position>175</x_position>
 		<y_position>75</y_position>
 		<view>
@@ -19,7 +19,7 @@
 	</station>
 	<station>
 		<label>MetalCutter</label>
-		<troughput>5</troughput>
+		<troughput>10</troughput>
 		<x_position>250</x_position>
 		<y_position>325</y_position>
 		<view>
@@ -36,7 +36,7 @@
 	</station>
 	<station>
 		<label>Assembly</label>
-		<troughput>5</troughput>
+		<troughput>400</troughput>
 		<x_position>475</x_position>
 		<y_position>150</y_position>
 		<view>
@@ -53,6 +53,23 @@
 		<outqueue>
 			<x_position>520</x_position>
 			<y_position>260</y_position>
+		</outqueue>
+	</station>
+	<station>
+		<label>Transport</label>
+		<troughput>10</troughput>
+		<x_position>700</x_position>
+		<y_position>275</y_position>
+		<view>
+			<image>lkw.png</image>
+		</view>
+		<inqueue>
+			<x_position>720</x_position>
+			<y_position>260</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>720</x_position>
+			<y_position>380</y_position>
 		</outqueue>
 	</station>
 	
