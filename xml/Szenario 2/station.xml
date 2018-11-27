@@ -1,70 +1,58 @@
 <?xml version="1.0"?>
 <settings>
 	<station>
-		<label>Station_1</label>
-		<troughput>2</troughput>
-		<x_position>200</x_position>
-		<y_position>100</y_position>
+		<label>WoodCutter</label>
+		<troughput>5</troughput>
+		<x_position>175</x_position>
+		<y_position>75</y_position>
 		<view>
-			<image>station.png</image>
+			<image>woodcutter.png</image>
 		</view>
-		<inqueue>
-			<x_position>180</x_position>
-			<y_position>40</y_position>
-		</inqueue>
 		<inqueue>
 			<x_position>220</x_position>
 			<y_position>40</y_position>
 		</inqueue>
 		<outqueue>
 			<x_position>220</x_position>
-			<y_position>180</y_position>
+			<y_position>190</y_position>
 		</outqueue>
 	</station>
 	<station>
-		<label>Station_2</label>
-		<troughput>1</troughput>
-		<x_position>350</x_position>
-		<y_position>350</y_position>
+		<label>MetalCutter</label>
+		<troughput>5</troughput>
+		<x_position>250</x_position>
+		<y_position>325</y_position>
 		<view>
-			<image>station.png</image>
+			<image>metalcutter.png</image>
 		</view>
 		<inqueue>
-			<x_position>330</x_position>
-			<y_position>290</y_position>
-		</inqueue>
-		<inqueue>
-			<x_position>370</x_position>
+			<x_position>300</x_position>
 			<y_position>290</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>370</x_position>
+			<x_position>300</x_position>
 			<y_position>430</y_position>
 		</outqueue>
 	</station>
 	<station>
-		<label>Station_3</label>
-		<troughput>2</troughput>
-		<x_position>500</x_position>
+		<label>Assembly</label>
+		<troughput>5</troughput>
+		<x_position>475</x_position>
 		<y_position>150</y_position>
 		<view>
-			<image>station.png</image>
+			<image>assembling.png</image>
 		</view>
 		<inqueue>
-			<x_position>480</x_position>
-			<y_position>90</y_position>
+			<x_position>500</x_position>
+			<y_position>120</y_position>
 		</inqueue>
 		<inqueue>
-			<x_position>520</x_position>
-			<y_position>90</y_position>
-		</inqueue>
-		<inqueue>
-			<x_position>560</x_position>
-			<y_position>90</y_position>
+			<x_position>540</x_position>
+			<y_position>120</y_position>
 		</inqueue>
 		<outqueue>
 			<x_position>520</x_position>
-			<y_position>230</y_position>
+			<y_position>260</y_position>
 		</outqueue>
 	</station>
 	

@@ -3,9 +3,9 @@
 	<end_station>
 		<label>End_Station</label>
 		<x_position>700</x_position>
-		<y_position>300</y_position>
+		<y_position>275</y_position>
 		<view>
-			<image>endstation.png</image>
+			<image>lkw.png</image>
 		</view>
 		<inqueue>
 			<x_position>720</x_position>

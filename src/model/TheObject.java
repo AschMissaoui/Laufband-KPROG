@@ -17,8 +17,9 @@ import controller.Simulation;
  */
 	
 	public class TheObject extends Actor {
+		/*Counter for Hammers*/
+	    public static int numHammers = 0 ;
 		/*reference aud the end station*/
-	public static int numHammers = 0 ;
 		private final String endStation = "End_Station";
 		
 		/** the view of the object */
@@ -217,7 +218,7 @@ import controller.Simulation;
 				ImageIcon imageIcon = new ImageIcon(image);
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
-				numHammers ++;
+				numHammers ++ ;
 			}
 			
 			else if(station.label.equals("Assembly") && this.theView.getIcon().toString().equals("metal.png")) {

@@ -22,23 +22,30 @@ import org.jdom2.input.SAXBuilder;
  */
 public class Factory {
 	
+    /**
+	* the scenario we want to test
+	*/
+	private static final String CHOSEN_SCENARIO = "Szenario 1";
+	
 	/** the objects XML data file */
-	private static String theObjectDataFile = "xml/object.xml"; 
+	private static String theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml"; 
 	
 	/** the stations XML data file */
-	private static String theStationDataFile = "xml/station.xml"; 
+	private static String theStationDataFile = "xml/"+CHOSEN_SCENARIO+"/station.xml"; 
 	
 	/** the start station XML data file */
-	private static String theStartStationDataFile = "xml/startstation.xml"; 
+	private static String theStartStationDataFile = "xml/"+CHOSEN_SCENARIO+"/startstation.xml"; 
 	
 	/** the end station XML data file */
-	private static String theEndStationDataFile = "xml/endstation.xml"; 
+	private static String theEndStationDataFile = "xml/"+CHOSEN_SCENARIO+"/endstation.xml"; 
 	
 	/** the x position of the starting station, also position for all starting objects */
 	private static int XPOS_STARTSTATION;
 	
 	/** the y position of the starting station, also position for all starting objects */
 	private static int YPOS_STARTSTATION; 
+	
+	
 		
 	
 	/**
@@ -328,5 +335,6 @@ public class Factory {
 				e.printStackTrace();
 		}
      }
-        
+     
 }
+     
