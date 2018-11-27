@@ -5,7 +5,6 @@ import io.Factory;
 import io.Statistics;
 import java.util.concurrent.atomic.AtomicLong;
 import model.Actor;
-import view.StatsView;
 
 
 /**
