@@ -45,13 +45,13 @@ public abstract class Station extends Actor {
 		
 		//If there is an inqueue object found, handle it
 		if (numberOfInQueueObjects() > 0) this.handleObject(this.getNextInQueueObject());
-				
 		//If there is an object in the out queue -> wake it up
 		if(numberOfOutQueueObjects() > 0){
 			
 			TheObject myObject = (TheObject) this.getNextOutQueueObject();//get the object
 			
 			//instruct the object to move to the next station
+
 			myObject.wakeUp();
 				
 		}

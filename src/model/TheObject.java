@@ -5,12 +5,10 @@ import io.Statistics;
 import java.awt.Component;
 import java.util.ArrayList;
 
-import view.SimulationView;
+import javax.swing.ImageIcon;
+
 import view.TheObjectView;
 import controller.Simulation;
-
-import javax.swing.*;
-
 /**
  * Class for the objects
  * 
@@ -19,8 +17,9 @@ import javax.swing.*;
  */
 	
 	public class TheObject extends Actor {
-		public static int numHammers = 0 ;
-							
+		/*reference aud the end station*/
+		private final String endStation = "End_Station";
+		
 		/** the view of the object */
 		public TheObjectView theView;
 		
@@ -126,32 +125,30 @@ import javax.swing.*;
 			
 			//there is just one queue, enter it
 			if(inQueues.size()==1) inQueues.get(0).offer(this);
-
 			
-			//Do we have more than one incoming queue?
-			//We have to make a decision which queue we choose -> your turn 
-			else{
-				
-				//get the first queue and it's size
-				SynchronizedQueue queueBuffer = inQueues.get(0);
-				int queueSize = queueBuffer.size();
-								
-				//Looking for the shortest queue (in a simple way)
-				for (SynchronizedQueue inQueue : inQueues) {
-						
-					if(inQueue.size() < queueSize) {
-						queueBuffer = inQueue;
-						queueSize = inQueue.size();
-					}
+			/*enterInQueue is EDITED*/
+			//When materials enters the Assembly they would split in 2 Queues depending on image
+			else if(station.label.equals("Assembly")) {
+				//if this object is a wood object, it goes into into the left queue
+				if(this.theView.getIcon().toString().equals("handle.png")){
+				inQueues.get(0).offer(this);
+					this.theView.setIcon(null);
 				}
-				
-				//enter the queue
-				queueBuffer.offer(this);
-								
+                //if this object is a lead object, it goes into into the right queue
+				else if(this.theView.getIcon().toString().equals("head.png")){
+					inQueues.get(1).offer(this);
+
+				}
+				else {
+					System.out.println("Wrong station.");
+				}
+										
 			}
 
 			//set actual station to the just entered station
 			this.actualStation = station;
+
+			
 				
 		}
 		
@@ -202,22 +199,46 @@ import javax.swing.*;
 						
 			//choose the next station to go to
 			Station station = this.getNextStation();
-
-
-			Icon hammer = new ImageIcon("hammer.png");
-			Icon handle = new ImageIcon("handle.png");
-			Icon head = new ImageIcon("head.png");
-
+			
 			//only move if there is a next station found
-			if(station == null) this.theView.setIcon(null);
-			else if(station.getLabel().equals("End_Station")) { this.theView.setIcon(hammer); numHammers++;}
-			else if((station.getLabel().equals("Assembly"))&&(this.theView.getIcon().toString().equals("wood.png"))) this.theView.setIcon(handle);
-			else if((station.getLabel().equals("Assembly"))&&(this.theView.getIcon().toString().equals("metal.png"))) this.theView.setIcon(head);
+			if(station == null)
+			{ 
+				this.theView.setIcon(null);
+				
+	
+				return false;
+			}
 
-
-
+			
+			else if(station.label.equals(endStation)) {
+				
+				String image = "hammer.png";
+				ImageIcon imageIcon = new ImageIcon(image);
+				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
+				this.theView.setIcon(imageIcon);
+				
+			}
+			
+			else if(station.label.equals("Assembly") && this.theView.getIcon().toString().equals("metal.png")) {
+				
+				String image = "head.png";
+				ImageIcon imageIcon = new ImageIcon(image);
+				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
+				this.theView.setIcon(imageIcon);
+				
+			}
+			
+			else if(station.label.equals("Assembly") && this.theView.getIcon().toString().equals("wood.png")) {
+				
+				String image = "handle.png";
+				ImageIcon imageIcon = new ImageIcon(image);
+				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
+				this.theView.setIcon(imageIcon);
+				
+			}
+					
 			//let the object move to the chosen station
-
+			
 			Statistics.show(this.getLabel() + " geht zur " + station.getLabel());
 			
 			//while target is not achieved 
@@ -231,7 +252,7 @@ import javax.swing.*;
 	 			if(station.getYPos() < this.yPos) this.yPos--;	
 	 			
 	 			//set our view to the new position
-				((Component) theView).setLocation(this.xPos, this.yPos);
+				((Component) theView).setLocation(this.xPos, this.yPos);	
 				
 				//let the thread sleep for the sequence time
 				try {
