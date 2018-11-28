@@ -6,8 +6,6 @@ import java.util.ArrayList;
 
 import controller.Simulation;
 
-import javax.swing.*;
-
 /**
  * Superclass for all Actors
  * 
@@ -27,8 +25,6 @@ public abstract class Actor extends Thread {
 			
 	/** all the Actor objects */
 	private static ArrayList<Actor> allActors = new ArrayList<Actor>();
-
-	private ImageIcon imageIcon ;
 	
 	/** Constructor for all actors
 	 * 

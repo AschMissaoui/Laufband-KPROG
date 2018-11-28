@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Superclass for simple stations with just one incoming and one outgoing queue
  * 
- * @author Jaeger, Schmidt
+ * @author Jaeger, Schmidt, Team15
  * @version 2017-10-29
  */
 

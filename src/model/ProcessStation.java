@@ -8,8 +8,8 @@ import controller.Simulation;
 /**
  * Class for a processing station
  * 
- * @author Jaeger, Schmidt
- * @version 2017-10-29
+ * @author Jaeger, Schmidt , edited by : team 15
+ * @version 2018-11-28
  */
 public class ProcessStation extends Station {
 	
@@ -96,20 +96,40 @@ public class ProcessStation extends Station {
 	
 	}
 	
-	
+	/**
+	 * getNextInQueueObject() was EDITED(completely changed) by @author Team15
+	 * 
+	 * Following method gets one of the Object from the 
+	 * incoming queues and returns it.
+	 * If there is more then one queue, the object would 
+	 * be picked from queue with more objects in it.
+	 *
+	 * @return Object from corresponding queue
+	 */
 	@Override
 	protected TheObject getNextInQueueObject(){
 		
 		//maybe we have more than one incoming queue -> get all incoming queues
 		for (SynchronizedQueue inQueue : this.inComingQueues) {
-							
-			//We have to make a decision which queue we choose -> your turn 
-			//I'll take the first possible I get
+				
+
 			if(inQueue.size() > 0){
-				return (TheObject) inQueue.poll();
+				if(this.getLabel().equals("Assembly"))
+				{
+					if(this.inComingQueues.get(0).size() >= this.inComingQueues.get(1).size())
+					{
+						return (TheObject) this.inComingQueues.get(0).poll();
+					}
+					else
+					{
+						return (TheObject) this.inComingQueues.get(1).poll();
+					}
+				}
+				else 
+					return (TheObject) inQueue.poll();
 			}
 		}
-		
+
 		//nothing is found
 		return null;
 	}
@@ -131,8 +151,15 @@ public class ProcessStation extends Station {
 		return null;
 		
 	}
-	
-	
+
+	/**
+	 * getNextInQueueObject() was EDITED(completely changed) by @author Team15
+	 *
+	 * the treatment includes releasing only "2" *different* objects each time
+	 * 	                   if an object happens to be stand-alone , it would have to wait.
+	 * @param theObject the object that should be treated
+	 *
+	 */
 	@Override
 	protected void handleObject(TheObject theObject){
 										
@@ -177,30 +204,38 @@ public class ProcessStation extends Station {
 		measurement.inUseTime = measurement.inUseTime + elapsedTime; 
 						
 		//the treatment is over, now the object chooses an outgoing queue and enter it
-		if (this.getLabel().equals("Assembly")){
-			if (theObject.numMetal>=1 && theObject.numWood>=1){
+		if (this.getLabel().equals("Assembly"))
+		{
+			//if we have >1 of each types
+			if (TheObject.numMetal>=1 && TheObject.numWood>=1)
+			{
 				notify();
-				theObject.enterOutQueue(this);
-				if(theObject.getType().equals("metal")){theObject.numMetal-- ;
-				theObject.numWood--;}
-			}
-			else if (theObject.numMetal<1 || theObject.numWood<1) {
-				try {
-					theObject.wait();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
+				//checks the type
+				if(theObject.getType().equals("metal"))
+				{
+					//adjusts the counters for "wood" and "metal"
+					TheObject.numMetal-- ;
+					TheObject.numWood--;
 				}
+				theObject.enterOutQueue(this);
+			}
+			//if the object is stand-alone
+			else if (TheObject.numMetal<1 || TheObject.numWood<1) 
+			{
+				//the object has to wait until further notice
+				try 
+				{theObject.wait();} 
+				catch (InterruptedException e)	
+				{e.printStackTrace();}
+				
 				handleObject(theObject);
 			}
 		} else if (!(this.getLabel().equals("Assembly")))theObject.enterOutQueue(this);
 			
 		//just to see the view of the outgoing queue works
-		try {
-			Thread.sleep(500);
-					
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		try {Thread.sleep(500);} 
+		catch (InterruptedException e) 
+		{e.printStackTrace();}
 		
 	}
 	

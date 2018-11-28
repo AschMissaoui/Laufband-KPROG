@@ -10,8 +10,8 @@ import model.Actor;
 /**
  * The main class, controls the flow of the simulation
  * 
- * @author Jaeger, Schmidt
- * @version 2016-07-07
+ * @author Jaeger, Schmidt , edited by : Team 15
+ * @version 2018-11-28
  */
 public class Simulation {
 	

@@ -1,37 +1,5 @@
 <?xml version="1.0"?>
 <settings>
-	neue Objekte
-	<object>
-		<label>Objekt_22</label>
-		<processtime>10</processtime>
-		<type>wood</type>
-		<speed>3</speed>
-		<view>
-			<image>wood.png</image>
-		</view>
-		<sequence>
-			<station>Start_Station</station>
-			<station>MetalCutter</station>
-			<station>Assembly</station>
-			<station>End_Station</station>
-
-		</sequence>
-	</object><object>
-	<label>Objekt_23</label>
-	<processtime>10</processtime>
-	<type>wood</type>
-	<speed>3</speed>
-	<view>
-		<image>wood.png</image>
-	</view>
-	<sequence>
-		<station>Start_Station</station>
-		<station>MetalCutter</station>
-		<station>Assembly</station>
-		<station>End_Station</station>
-
-	</sequence>
-</object>
 	<object>
 		<label>Objekt_1</label>
 		<processtime>10</processtime>

@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+
 /**
  * Class for our main window 
  * 
@@ -27,7 +28,7 @@ public class SimulationView extends JFrame {
 			
 	/** a panel where the views of our actors can run */
 	private static SimulationPanel simulationPanel = new SimulationPanel();
-	
+		
 	
 	/** Creates a JFrame main window for our simulation
 	* 
@@ -42,6 +43,7 @@ public class SimulationView extends JFrame {
 	 * 
 	 */
 	private void init(){
+		
 		
 		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		this.setSize(WIDTH, HEIGHT);

@@ -1,8 +1,14 @@
 package model;
 
+import io.Factory;
 import io.Statistics;
 
 import java.awt.Component;
+import java.beans.XMLEncoder;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
@@ -18,10 +24,12 @@ import controller.Simulation;
  */
 	
 	public class TheObject extends Actor {
+
+
 		/*Counter for Hammers*/
 	    public static int numHammers = 0 ;
 	    /*Counters for Wood and Metal*/
-	public static int numWood =0 , numMetal = 0;
+	    public static int numWood = 0 , numMetal = 0;
 		/*reference and the end station*/
 		private final String endStation = "End_Station";
 		/*reference and the first material type*/
@@ -65,6 +73,7 @@ import controller.Simulation;
 		 * @param xPos x position of the object
 		 * @param yPos y position of the object
 		 * @param image image of the object
+		 * @param type of the object (Team15)
 		 */
 		private TheObject(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
 			super(label, xPos, yPos);
@@ -142,12 +151,11 @@ import controller.Simulation;
 			
 			/**
 			 * enterInQueue is EDITED by @author Team15
-			 * */
+			 */
 			//When materials enters the Assembly they would split in 2 Queues depending on image
 			else if(station.label.equals("Assembly")) {
 				if(getType(TYPE1)){
 				inQueues.get(0).offer(this);
-
 					numWood++;
 				}
 				
@@ -183,15 +191,13 @@ import controller.Simulation;
 			if(outQueues.size()==1) outQueues.get(0).offer(this);
 
 			/**
-			 * enterInQueue is EDITED by @author Team15
-			 * */
+			 * 	enterOutQueue is EDITED by @author Team15
+			 */
 				//When materials enters the Assembly they would split in 2 Queues depending on image
-			else if(station.label.equals("Assembly")) {
-				if(getType(TYPE1)) {
-
-					this.theView.setIcon(null);
-
-				}}
+			else if(station.label.equals("Assembly")) 
+			{
+				if(getType(TYPE1)) { this.theView.setIcon(null); }
+			}
 			
 			//Do we have more than one outgoing queue?
 			//We have to make a decision which queue we choose -> your turn 
@@ -216,7 +222,7 @@ import controller.Simulation;
 			}
 		
 		}
-		
+
 			
 		@Override		
 		protected boolean work(){
@@ -227,16 +233,17 @@ import controller.Simulation;
 			//choose the next station to go to
 			Station station = this.getNextStation();
 			
+			/**  
+			 *  work() is EDITED by @author Team15
+			 */
+			
 			//only move if there is a next station found
 			if(station == null)
 			{ 
 				this.theView.setIcon(null);
-
-	
 				return false;
 			}
 
-			
 			else if(station.label.equals("Transport")) {
 				
 				String image = "hammer.png";
@@ -244,7 +251,7 @@ import controller.Simulation;
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
 				numHammers ++ ;
-
+				FileInfo.create();
 			}
 															
 			else if(station.label.equals("Assembly") && getType(TYPE2)) {
@@ -266,6 +273,10 @@ import controller.Simulation;
 			if (station.label.equals(endStation)){
 				this.theView.setIcon(null);
 			}
+			
+			/**
+			 *  The following code of work() wasn't change by our team
+			 */
 					
 			//let the object move to the chosen station
 			
@@ -361,21 +372,18 @@ import controller.Simulation;
 
 		
 		/**
-		 * made by Team 15
+		 * made by @author Team15
 		 * This method returns type of the current Object as String
 		 * 
 		 * @return myType as String
 		 */
-		public String getType()
-		{
-			return myType;
-		}
+		public String getType()	{return myType;}
 		
 		/**
-		 * made by Team 15
+		 * made by @author Team15
 		 * This method checks if the type of the object is equals given type
 		 * 
-		 * @param type als String
+		 * @param type as String
 		 * @return boolean 
 		 */
 		public boolean getType(String type)

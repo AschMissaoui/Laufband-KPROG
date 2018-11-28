@@ -74,6 +74,7 @@ public class QueueViewJPanel extends JPanel implements QueueView{
 		//add the components to the panel
 		this.add(theLabel);
 		this.add(theBar);
+		
 				
 		//add the panel to the simulation view
 		SimulationView.addActorView(this);

@@ -1,5 +1,7 @@
 package io;
 import view.*;
+
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,15 +20,17 @@ import org.jdom2.input.SAXBuilder;
  * This is an abstract factory that creates instances
  * of actor types like objects, stations and their queues 
  * 
- * @author Jaeger, Schmidt
- * @version 2017-10-29
+ * @author Jaeger, Schmidt edited by : Team15
+ *
+ * @version 2018-11-28
  */
 public class Factory {
-	
-    /**
+
+
+	/**
 	* the scenario we want to test
 	*/
-	private static final String CHOSEN_SCENARIO = "Szenario 2";
+	private static final String CHOSEN_SCENARIO = "Szenario 1";
 	
 	/** the objects XML data file */
 	private static String theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml"; 
