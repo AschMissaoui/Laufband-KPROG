@@ -38,7 +38,7 @@ public class FileInfo {
 
     }
 
-    public static void create(){
+    public static void update(){
         FileInfo myOrder = new FileInfo("Hammer");
 
 

@@ -251,7 +251,7 @@ import controller.Simulation;
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
 				numHammers ++ ;
-				FileInfo.create();
+				FileInfo.update();
 			}
 															
 			else if(station.label.equals("Assembly") && getType(TYPE2)) {
