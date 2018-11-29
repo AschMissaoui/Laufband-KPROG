@@ -134,3 +134,13 @@ Thu Nov 29 16:31:46 CET 2018 Customer 67595 bought 3607$ worth of Hammers.
 Thu Nov 29 16:31:48 CET 2018 Customer 479528 bought 861$ worth of Hammers.
 Thu Nov 29 16:31:49 CET 2018 Customer 355781 bought 4210$ worth of Hammers.
 Thu Nov 29 16:31:50 CET 2018 Customer 280068 bought 1596$ worth of Hammers.
+Thu Nov 29 17:07:08 CET 2018 Customer 225063 bought 2460$ worth of Hammers.
+Thu Nov 29 17:07:09 CET 2018 Customer 53841 bought 1978$ worth of Hammers.
+Thu Nov 29 17:07:10 CET 2018 Customer 366442 bought 4453$ worth of Hammers.
+Thu Nov 29 17:07:11 CET 2018 Customer 387244 bought 3702$ worth of Hammers.
+Thu Nov 29 17:07:12 CET 2018 Customer 371325 bought 2550$ worth of Hammers.
+Thu Nov 29 17:07:14 CET 2018 Customer 27647 bought 4308$ worth of Hammers.
+Thu Nov 29 17:07:15 CET 2018 Customer 347851 bought 4975$ worth of Hammers.
+Thu Nov 29 17:07:16 CET 2018 Customer 158881 bought 540$ worth of Hammers.
+Thu Nov 29 17:07:17 CET 2018 Customer 38571 bought 4709$ worth of Hammers.
+Thu Nov 29 17:07:18 CET 2018 Customer 315846 bought 1018$ worth of Hammers.

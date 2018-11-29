@@ -74,7 +74,7 @@ public class ProcessStation extends Station {
 	New Class Exception : too many stations
 	für Bonusaufgabe Singleton
 	 */
-	private static class tooManyStationsException extends Exception {
+	public static class tooManyStationsException extends Exception {
         public tooManyStationsException () {
             super("error : too many Stations");
         }

@@ -289,9 +289,11 @@ public class Factory {
 				e.printStackTrace();
 		} catch (IOException e) {
 				e.printStackTrace();
-		}
-    	
-    }
+		} catch (ProcessStation.tooManyStationsException e) {
+            e.printStackTrace();
+        }
+
+     }
     
      /**
      * create the end station
