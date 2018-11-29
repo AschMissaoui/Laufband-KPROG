@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3c9cd9b0-78cb-49ec-962c-49aaee54e448" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/DataLogHammers.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/DataLogHammers.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/DataLogMaterial.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log/DataLogMaterial.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/ProcessStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ProcessStation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,30 +70,30 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="21" />
-          <entry key="txt" value="10" />
+          <entry key="java" value="23" />
+          <entry key="txt" value="11" />
           <entry key="xml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="21" />
-          <entry key="PLAIN_TEXT" value="10" />
+          <entry key="JAVA" value="23" />
+          <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1977" />
-          <entry key="txt" value="11" />
+          <entry key="java" value="2583" />
+          <entry key="txt" value="21" />
           <entry key="xml" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1977" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="JAVA" value="2583" />
+          <entry key="PLAIN_TEXT" value="21" />
           <entry key="XML" value="36" />
         </counts>
       </usages-collector>
@@ -152,11 +155,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/FileInfo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="107" column="47" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log/DataLogHammers.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="81" column="74" lean-forward="true" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Actor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/FactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,11 +206,25 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-493">
-              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="-714">
+              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <folding>
+                <element signature="e#397#416#0" expanded="true" />
+                <element signature="e#527#546#0" expanded="true" />
+                <element signature="e#2550#2551#0" expanded="true" />
+                <element signature="e#2593#2594#0" expanded="true" />
+                <element signature="e#8695#8696#0" expanded="true" />
+                <element signature="e#8723#8724#0" expanded="true" />
+                <element signature="e#8792#8793#0" expanded="true" />
+                <element signature="e#8820#8821#0" expanded="true" />
+                <element signature="e#8978#8979#0" expanded="true" />
+                <element signature="e#8996#8997#0" expanded="true" />
+                <element signature="e#9068#9069#0" expanded="true" />
+                <element signature="e#9086#9087#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,8 +232,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Station.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+            <state relative-caret-position="85">
+              <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+              <folding>
+                <element signature="e#2269#2270#0" expanded="true" />
+                <element signature="e#2294#2295#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -239,7 +290,6 @@
         <option value="$PROJECT_DIR$/src/controller/ScaleManager.java" />
         <option value="$PROJECT_DIR$/xml/Szenario 1/station.xml" />
         <option value="$PROJECT_DIR$/xml/Szenario 1/object.xml" />
-        <option value="$PROJECT_DIR$/src/model/ProcessStation.java" />
         <option value="$PROJECT_DIR$/src/view/StartButton.java" />
         <option value="$PROJECT_DIR$/src/io/Statistics.java" />
         <option value="$PROJECT_DIR$/src/model/Hammer.java" />
@@ -253,6 +303,8 @@
         <option value="$PROJECT_DIR$/xml/Szenario 2/object.xml" />
         <option value="$PROJECT_DIR$/src/model/FactoryTest.java" />
         <option value="$PROJECT_DIR$/src/io/FactoryTest.java" />
+        <option value="$PROJECT_DIR$/src/model/Station.java" />
+        <option value="$PROJECT_DIR$/src/model/ProcessStation.java" />
       </list>
     </option>
   </component>
@@ -356,7 +408,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543504382555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543505892871" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -384,7 +436,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.FactoryTest.myXMLTest">
+  <component name="RunManager" selected="Application.Simulation">
     <configuration name="Simulation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.Simulation" />
       <module name="Blockwoche_Prototype_aktuell" />
@@ -477,10 +529,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Simulation" />
         <item itemvalue="TestNG.FactoryTest.myXMLTest" />
         <item itemvalue="TestNG.FactoryTest.creationTest" />
         <item itemvalue="TestNG.FactoryTest" />
-        <item itemvalue="Application.Simulation" />
         <item itemvalue="TestNG.GraphPlotterTest.createDiagramWithInitialDataPoints" />
       </list>
     </recent_temporary>
@@ -509,7 +561,7 @@
       <workItem from="1543411584022" duration="2037000" />
       <workItem from="1543414395603" duration="866000" />
       <workItem from="1543484284948" duration="49000" />
-      <workItem from="1543486201466" duration="15324000" />
+      <workItem from="1543486201466" duration="17378000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1543308146837</created>
@@ -588,16 +640,24 @@
       <option name="project" value="LOCAL" />
       <updated>1543499297552</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Junit">
+      <created>1543504209363</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1543504209363</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Junit">
+      <created>1543504459457</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1543504459457</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FactoryTest_myXMLTest - 2018.11.29 at 15h 57m 10s.xml">
-      <configuration name="FactoryTest.myXMLTest" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="FactoryTest_myXMLTest - 2018.11.29 at 15h 57m 24s.xml">
-      <configuration name="FactoryTest.myXMLTest" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="FactoryTest_myXMLTest - 2018.11.29 at 15h 58m 17s.xml">
       <configuration name="FactoryTest.myXMLTest" configurationId="TestNG" />
     </history-entry>
@@ -622,9 +682,15 @@
     <history-entry file="FactoryTest_creationTest - 2018.11.29 at 16h 03m 52s.xml">
       <configuration name="FactoryTest.creationTest" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="FactoryTest_myXMLTest - 2018.11.29 at 16h 09m 26s.xml">
+      <configuration name="FactoryTest.myXMLTest" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="FactoryTest_myXMLTest - 2018.11.29 at 16h 30m 45s.xml">
+      <configuration name="FactoryTest.myXMLTest" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55528000" />
+    <option name="totallyTimeSpent" value="57582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -673,7 +739,8 @@
     </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="scenarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="scenarios" />
+    <MESSAGE value="Junit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Junit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/startstation.png">
@@ -732,13 +799,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/GraphPlotterTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Actor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/StatsView.java" />
     <entry file="file://$PROJECT_DIR$/xml/object.xml" />
     <entry file="file://$PROJECT_DIR$/src/view/StartButton.java">
@@ -852,21 +912,6 @@
     <entry file="file://$PROJECT_DIR$/xml/Szenario 3/endstation.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/FileInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="94" column="55" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log/DataLogHammers.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-454" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/log/DataLogMaterial.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -944,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Station.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="51" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/SimpleStation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -958,19 +996,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
+    <entry file="file://$PROJECT_DIR$/src/model/FileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-493">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        <state relative-caret-position="254">
+          <caret line="107" column="47" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/io/FactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="65" column="40" lean-forward="true" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/DataLogHammers.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="81" column="74" lean-forward="true" selection-start-line="81" selection-start-column="74" selection-end-line="81" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Station.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="29" column="69" selection-start-line="29" selection-start-column="69" selection-end-line="29" selection-end-column="69" />
+          <folding>
+            <element signature="e#2269#2270#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#397#416#0" expanded="true" />
+            <element signature="e#527#546#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
+            <element signature="e#2593#2594#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8723#8724#0" expanded="true" />
+            <element signature="e#8792#8793#0" expanded="true" />
+            <element signature="e#8820#8821#0" expanded="true" />
+            <element signature="e#8978#8979#0" expanded="true" />
+            <element signature="e#8996#8997#0" expanded="true" />
+            <element signature="e#9068#9069#0" expanded="true" />
+            <element signature="e#9086#9087#0" expanded="true" />
           </folding>
         </state>
       </provider>

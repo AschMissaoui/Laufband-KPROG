@@ -12,7 +12,8 @@ import controller.Simulation;
  * @version 2018-11-28
  */
 public class ProcessStation extends Station {
-	
+    /** Max number of stations*/
+	public static int FreeStations = 5 ;
 	/** a list of all incoming queues*/
 	private ArrayList<SynchronizedQueue> inComingQueues = new ArrayList<SynchronizedQueue>();
 	
@@ -58,13 +59,23 @@ public class ProcessStation extends Station {
 	 * @param yPos y position of the station
 	 * @param image image of the station 
 	 */
-	public static void create(String label, ArrayList<SynchronizedQueue> inQueues,ArrayList<SynchronizedQueue> outQueues , double troughPut, int xPos, int yPos, String image){
-	
+	public static void create(String label, ArrayList<SynchronizedQueue> inQueues,ArrayList<SynchronizedQueue> outQueues , double troughPut, int xPos, int yPos, String image) throws tooManyStationsException{
+	    if (FreeStations>0){
 		new ProcessStation(label, inQueues,outQueues , troughPut, xPos, yPos, image);
+	    FreeStations -- ;
+	    }
+		else{
+		    throw  new tooManyStationsException();
+        }
 		
 	}
-	
-	
+	private static class tooManyStationsException extends Exception {
+        public tooManyStationsException () {
+            super("error : too many Stations");
+        }
+    }
+
+
 	@Override
 	protected int numberOfInQueueObjects(){
 		
