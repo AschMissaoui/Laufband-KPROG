@@ -111,6 +111,7 @@ import controller.Simulation;
 		public static void create(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
 				
 			new TheObject(type, label, stationsToGo, processtime, speed, xPos, yPos, image);
+
 				
 		}
 					
@@ -157,11 +158,13 @@ import controller.Simulation;
 				if(getType(TYPE1)){
 				inQueues.get(0).offer(this);
 					numWood++;
+					FileInfo.updateBoughtWood();
 				}
 				
 				else if(getType(TYPE2)){
 					inQueues.get(1).offer(this);
 					numMetal++;
+					FileInfo.updateBoughtMetal();
 				}
 				else {
 					System.out.println("Wrong station.");
@@ -251,7 +254,7 @@ import controller.Simulation;
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 				this.theView.setIcon(imageIcon);
 				numHammers ++ ;
-				FileInfo.update();
+				FileInfo.updateSold();
 			}
 															
 			else if(station.label.equals("Assembly") && getType(TYPE2)) {

@@ -4,6 +4,8 @@
     <list default="true" id="3c9cd9b0-78cb-49ec-962c-49aaee54e448" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/FileInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/FileInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/TheObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/TheObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xml/myData.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,25 +69,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="java" value="6" />
+          <entry key="txt" value="6" />
           <entry key="xml" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="6" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="XML" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="128" />
+          <entry key="java" value="370" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="128" />
+          <entry key="JAVA" value="370" />
           <entry key="XML" value="9" />
         </counts>
       </usages-collector>
@@ -132,8 +136,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/io/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4180">
+            <state relative-caret-position="-4584">
               <caret line="31" selection-start-line="31" selection-end-line="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2924">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -141,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/TheObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="253" column="34" selection-start-line="253" selection-start-column="34" selection-end-line="253" selection-end-column="34" />
+            <state relative-caret-position="3612">
+              <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -150,8 +163,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/FileInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="169">
+              <caret line="87" column="105" lean-forward="true" selection-start-line="87" selection-start-column="105" selection-end-line="87" selection-end-column="105" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,32 +173,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/Szenario 1/endstation.xml">
+        <entry file="file://$PROJECT_DIR$/log/DataLogHammers.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/Szenario 1/object.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5355">
-              <caret line="315" selection-start-line="315" selection-end-line="315" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xml/Szenario 1/station.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/log/DataLogMaterial.txt">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/DrawAssistant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1564">
+            <state relative-caret-position="-164">
               <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
             </state>
           </provider>
@@ -261,8 +261,10 @@
         <option value="$PROJECT_DIR$/src/io/Statistics.java" />
         <option value="$PROJECT_DIR$/src/io/Factory.java" />
         <option value="$PROJECT_DIR$/src/model/Hammer.java" />
-        <option value="$PROJECT_DIR$/src/model/FileInfo.java" />
         <option value="$PROJECT_DIR$/src/model/TheObject.java" />
+        <option value="$PROJECT_DIR$/src/model/FileInfo.java" />
+        <option value="$PROJECT_DIR$/log/DataLogMaterial.txt" />
+        <option value="$PROJECT_DIR$/log/DataLogHammers.txt" />
       </list>
     </option>
   </component>
@@ -294,13 +296,7 @@
             <path>
               <item name="kprog" type="b2602c69:ProjectViewProjectNode" />
               <item name="kprog" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kprog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kprog" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
-              <item name="Szenario 1" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,7 +311,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543413533346" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543489560986" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -463,7 +459,7 @@
       <workItem from="1543411584022" duration="2037000" />
       <workItem from="1543414395603" duration="866000" />
       <workItem from="1543484284948" duration="49000" />
-      <workItem from="1543486201466" duration="428000" />
+      <workItem from="1543486201466" duration="2977000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1543308146837</created>
@@ -493,7 +489,21 @@
       <option name="project" value="LOCAL" />
       <updated>1543414786971</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="init">
+      <created>1543486638499</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1543486638499</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init">
+      <created>1543486813563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1543486813563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -523,7 +533,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40632000" />
+    <option name="totallyTimeSpent" value="43181000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -538,7 +548,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32911393" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.306962" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.306962" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -574,12 +584,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xml/startstation.xml" />
-    <entry file="file://$PROJECT_DIR$/xml/station.out.xml" />
-    <entry file="file://$PROJECT_DIR$/xml/object.out.out.xml" />
-    <entry file="file://$PROJECT_DIR$/sample sources/newactor.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/station.xml" />
     <entry file="file://$PROJECT_DIR$/xml/object.out.xml" />
     <entry file="file://$PROJECT_DIR$/xml/endstation.xml" />
@@ -730,13 +734,6 @@
     <entry file="file://$PROJECT_DIR$/xml/Szenario 2/object.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/ScaleManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -779,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/Factory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4180">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xml/Szenario 1/endstation.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -803,20 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/DrawAssistant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/CustomPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/DiagramPane.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -831,17 +807,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/TheObject.java">
+    <entry file="file://$PROJECT_DIR$/src/model/CustomPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="253" column="34" selection-start-line="253" selection-start-column="34" selection-end-line="253" selection-end-column="34" />
+        <state relative-caret-position="102">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/DrawAssistant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-164">
+          <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/DataLogMaterial.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xml/DataLogHammers.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ProcessStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2924">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/Factory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4584">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/TheObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3612">
+          <caret line="256" column="16" selection-start-line="256" selection-start-column="16" selection-end-line="256" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/DataLogMaterial.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log/DataLogHammers.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/FileInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="169">
+          <caret line="87" column="105" lean-forward="true" selection-start-line="87" selection-start-column="105" selection-end-line="87" selection-end-column="105" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
