@@ -1,10 +1,5 @@
 package io;
 
-
-
-
-import model.Station;
-import model.TheObject;
 import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
@@ -17,9 +12,9 @@ import static org.testng.Assert.assertEquals;
 
 
 /**
- * tests a method from the Factory class
+ * tests XML file reading
  *
- * @author Mariano, Volz, Yil, Cetinkaya
+ * @author Team15
  * @version 1.0
  */
 public class FactoryTest {
