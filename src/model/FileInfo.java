@@ -2,6 +2,7 @@ package model;
 
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
@@ -13,7 +14,7 @@ this Class is for the Bonusaufgabe 8
 
 public class FileInfo {
     //reder for myData.txt as string
-    public static String myCustomers;
+    private static String myCustomers;
 
     static {
         try {
@@ -26,8 +27,8 @@ public class FileInfo {
     private int price ;
     private int customer ;
     private String name ;
-    /*new XML file for BonusAufgabe*/
-    public static File myFile = new File("xml/file.xml");
+
+
 
     public FileInfo(String name){
         this.name = name ;
@@ -45,13 +46,16 @@ public class FileInfo {
 
         PrintWriter writer = null;
         try {
-            writer = new PrintWriter("xml/myData.txt", "UTF-8");
+            /*new XML file for BonusAufgabe*/
+            writer = new PrintWriter("xml/myData.txt", StandardCharsets.UTF_8);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-       myCustomers = myCustomers + "\n"+  new Date() + " Customer " + myOrder.customer + " bought " + myOrder.price + "$ worth of Hammers." ;
+        myCustomers = myCustomers + "\n"+  new Date() + " Customer " + myOrder.customer + " bought " + myOrder.price + "$ worth of Hammers." ;
         writer.print(myCustomers);
         writer.close();
     }
