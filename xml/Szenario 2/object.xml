@@ -1,6 +1,56 @@
 <?xml version="1.0"?>
 <settings>
 	<object>
+		<label>Objekt_23</label>
+		<processtime>10</processtime>
+		<type>metal</type>
+		<speed>60</speed>
+		<view>
+			<image>metal.png</image>
+		</view>
+		<sequence>
+			<station>Start_Station</station>
+			<station>MetalCutter</station>
+			<station>Assembly</station>
+			<station>Transport</station>
+			<station>End_Station</station>
+
+		</sequence>
+	</object>
+	<object>
+		<label>Objekt_21</label>
+		<processtime>10</processtime>
+		<type>wood</type>
+		<speed>30</speed>
+		<view>
+			<image>wood.png</image>
+		</view>
+		<sequence>
+			<station>Start_Station</station>
+			<station>WoodCutter</station>
+			<station>Assembly</station>
+			<station>End_Station</station>
+
+		</sequence>
+	</object>
+	<object>
+		<label>Objekt_22</label>
+		<processtime>10</processtime>
+		<type>wood</type>
+		<speed>30</speed>
+		<view>
+			<image>wood.png</image>
+		</view>
+		<sequence>
+			<station>Start_Station</station>
+			<station>WoodCutter</station>
+			<station>Assembly</station>
+			<station>End_Station</station>
+
+		</sequence>
+	</object>
+
+	<object>
 		<label>Objekt_1</label>
 		<processtime>10</processtime>
 		<type>wood</type>

@@ -72,7 +72,7 @@ public class FileInfo {
     }
     public static void updateBoughtMetal(){
         FileInfo myOrder = new FileInfo("Material");
-        int randomWorth = (int )(Math.random() * 500 + 300);
+        int randomWorth = (int )(Math.random() * 500000 + 300);
 
 
         PrintWriter writer = null;
@@ -92,7 +92,7 @@ public class FileInfo {
     }
     public static void updateBoughtWood(){
         FileInfo myOrder = new FileInfo("Material");
-        int randomWorth = (int )(Math.random() * 500 + 300);
+        int randomWorth = (int )(Math.random() * 500000 + 300);
 
 
         PrintWriter writer = null;
