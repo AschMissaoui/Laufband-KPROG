@@ -28,7 +28,7 @@ public class FileInfo {
 
     static {
         try {
-            myCustomers = new String(Files.readAllBytes(Paths.get("log/DataLogMaterial.txt")));
+            myOrders = new String(Files.readAllBytes(Paths.get("log/DataLogMaterial.txt")));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -97,7 +97,6 @@ public class FileInfo {
 
         PrintWriter writer = null;
         try {
-            /*new XML FIle*/
             writer = new PrintWriter("log/DataLogMaterial.txt", StandardCharsets.UTF_8);
         } catch (FileNotFoundException e) {
             e.printStackTrace();

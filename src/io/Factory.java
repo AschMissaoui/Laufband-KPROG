@@ -1,10 +1,13 @@
 package io;
 import view.*;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+
 import model.EndStation;
 import model.ProcessStation;
 import model.StartStation;
@@ -15,6 +18,8 @@ import org.jdom2.Document;
 import org.jdom2.Element;
 import org.jdom2.JDOMException;
 import org.jdom2.input.SAXBuilder;
+
+import static java.lang.Thread.sleep;
 
 /**
  * This is an abstract factory that creates instances
@@ -30,7 +35,7 @@ public class Factory {
 	/**
 	* the scenario we want to test
 	*/
-	private static final String CHOSEN_SCENARIO = "Szenario 1";
+	public static  String CHOSEN_SCENARIO = null;
 	
 	/** the objects XML data file */
 	private static String theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml"; 
@@ -58,15 +63,19 @@ public class Factory {
      * 
      */
 	public static void createStartScenario(){
-		
-		/*NOTE: The start station must be created first,
-		* because the objects constructor puts the objects into the start stations outgoing queue
-		*/ 
-		createStartStation(); 
-		createObjects();
-		createProcessStations();
-		createEndStation();
-	}
+
+        theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml";
+        theStationDataFile = "xml/"+CHOSEN_SCENARIO+"/station.xml";
+        theStartStationDataFile = "xml/"+CHOSEN_SCENARIO+"/startstation.xml";
+        theEndStationDataFile = "xml/"+CHOSEN_SCENARIO+"/endstation.xml";
+
+
+        createStartStation();
+        createObjects();
+        createProcessStations();
+        createEndStation();
+
+    }
 	
 	/**
      * create the start station

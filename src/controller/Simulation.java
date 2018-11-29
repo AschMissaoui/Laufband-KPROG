@@ -3,8 +3,14 @@ package controller;
 import view.SimulationView;
 import io.Factory;
 import io.Statistics;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicLong;
 import model.Actor;
+
+import static java.lang.Thread.sleep;
 
 
 /**
@@ -35,7 +41,22 @@ public class Simulation {
 	 * @param args
 	 */
 	public static void main(String[] args){
-		
+		//choosing a scenario
+		System.out.println("Please choose a scenario:");
+		System.out.println("Options : 1 || 2 || 3");
+
+		Scanner reader = new Scanner(System.in);  // Reading from System.in
+		String n = reader.next(); // Scans the next token of the input as a String.
+		Factory.CHOSEN_SCENARIO ="Szenario " +  n ;
+		System.out.println("Chosen : " + Factory.CHOSEN_SCENARIO);
+		reader.close();
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+
 		//a new simulation
 		Simulation theSimulation = new Simulation();
 		theSimulation.init();
@@ -49,10 +70,13 @@ public class Simulation {
 	 * 
 	 */
 	private void init(){
-		
-		//create all stations and objects for the starting scenario out of XML
-		Factory.createStartScenario();
-				
+		try {
+			//create all stations and objects for the starting scenario out of XML
+			Factory.createStartScenario();
+		}
+		catch (Exception ex){
+
+		}
 		//the view of our simulation
 		new SimulationView();
 					
@@ -102,7 +126,7 @@ public class Simulation {
 				
 				try {
 				
-					Thread.sleep(CLOCKBEAT);
+					sleep(CLOCKBEAT);
 					
 					//Increase the global clock
 					clock.incrementAndGet();
