@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Date;
 /**
-this Class is for the Bonusaufgabe 5
+this Class is for the Bonusaufgabe 8
  @author Team 15
  @Version 28.11.2018
  */
