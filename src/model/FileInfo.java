@@ -13,7 +13,7 @@ this Class is for the Bonusaufgabe 8
  */
 
 public class FileInfo {
-    //reader for D.txt as string
+    //reader for DataLogHammer.txt as string
     private static String myCustomers;
 
     static {
@@ -23,6 +23,7 @@ public class FileInfo {
             e.printStackTrace();
         }
     }
+    //reader for DataLogMaterial.txt as string
     private static String myOrders;
 
     static {
