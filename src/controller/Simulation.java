@@ -41,22 +41,8 @@ public class Simulation {
 	 * @param args
 	 */
 	public static void main(String[] args){
-		//choosing a scenario
-		System.out.println("Please choose a scenario:");
-		System.out.println("Options : 1 || 2 || 3");
-
-		Scanner reader = new Scanner(System.in);  // Reading from System.in
-		String n = reader.next(); // Scans the next token of the input as a String.
-		Factory.CHOSEN_SCENARIO ="Szenario " +  n ;
-		System.out.println("Chosen : " + Factory.CHOSEN_SCENARIO);
-		reader.close();
-		try {
-			sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-
-
+		//use user input to choose a scenario
+		ChooseScenario();
 		//a new simulation
 		Simulation theSimulation = new Simulation();
 		theSimulation.init();
@@ -70,13 +56,10 @@ public class Simulation {
 	 * 
 	 */
 	private void init(){
-		try {
-			//create all stations and objects for the starting scenario out of XML
-			Factory.createStartScenario();
-		}
-		catch (Exception ex){
 
-		}
+		//create all stations and objects for the starting scenario out of XML
+		Factory.createStartScenario();
+
 		//the view of our simulation
 		new SimulationView();
 					
@@ -110,6 +93,36 @@ public class Simulation {
 		
 		*/
 		
+	}
+
+	/**
+	 * new method by Team 15
+	 */
+	private static void ChooseScenario(){
+		//choosing a scenario
+		System.out.println("Please choose a scenario:");
+		System.out.println("Options : 1 || 2 || 3");
+
+		Scanner reader = new Scanner(System.in);  // Reading from System.in
+		String n = reader.next(); // Scans the next token of the input as a String.
+
+
+		try {
+			sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+
+
+		if (!n.equals("1") && !n.equals("2") && !n.equals("3")) {
+			System.out.println("not found... try again");
+			ChooseScenario();
+
+	} else
+		Factory.CHOSEN_SCENARIO ="Szenario " +  n ;
+		System.out.println("Chosen : " + Factory.CHOSEN_SCENARIO);
+		reader.close();
 	}
 			
 	

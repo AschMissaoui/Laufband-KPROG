@@ -62,19 +62,16 @@ public class Factory {
      * create the actors for the starting scenario
      * 
      */
-	public static void createStartScenario(){
+	public static void createStartScenario() {
 
-        theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml";
-        theStationDataFile = "xml/"+CHOSEN_SCENARIO+"/station.xml";
-        theStartStationDataFile = "xml/"+CHOSEN_SCENARIO+"/startstation.xml";
-        theEndStationDataFile = "xml/"+CHOSEN_SCENARIO+"/endstation.xml";
-
-
+        theObjectDataFile = "xml/" + CHOSEN_SCENARIO + "/object.xml";
+        theStationDataFile = "xml/" + CHOSEN_SCENARIO + "/station.xml";
+        theStartStationDataFile = "xml/" + CHOSEN_SCENARIO + "/startstation.xml";
+        theEndStationDataFile = "xml/" + CHOSEN_SCENARIO + "/endstation.xml";
         createStartStation();
         createObjects();
         createProcessStations();
         createEndStation();
-
     }
 	
 	/**
