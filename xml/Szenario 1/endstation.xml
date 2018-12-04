@@ -9,11 +9,11 @@
 		</view>
 		<inqueue>
 			<x_position>30000</x_position>
-			<y_position>560</y_position>
+			<y_position>30</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>30000</x_position>
-			<y_position>580</y_position>
+			<x_position>30000</x_position>// 800 zu zeigen
+			<y_position>30</y_position>
 		</outqueue>
 	</end_station>
 </settings>
