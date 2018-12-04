@@ -4,6 +4,7 @@
 		<label>Objekt_1</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -13,13 +14,14 @@
 			<station>WoodCutter</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
-			
+
 		</sequence>
 	</object>
 	<object>
 		<label>Objekt_2</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -30,13 +32,14 @@
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>
-			
+
 		</sequence>
 	</object>
 	<object>
 		<label>Objekt_3</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -52,6 +55,7 @@
 		<label>Objekt_4</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -68,6 +72,7 @@
 		<label>Objekt_5</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -83,6 +88,7 @@
 		<label>Objekt_6</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -99,6 +105,7 @@
 		<label>Objekt_7</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -114,6 +121,7 @@
 		<label>Objekt_8</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -130,6 +138,7 @@
 		<label>Objekt_9</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -145,6 +154,7 @@
 		<label>Objekt_10</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -161,6 +171,7 @@
 		<label>Objekt_11</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -176,6 +187,7 @@
 		<label>Objekt_12</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -192,6 +204,7 @@
 		<label>Objekt_13</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -207,6 +220,7 @@
 		<label>Objekt_14</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -223,6 +237,7 @@
 		<label>Objekt_15</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -238,6 +253,7 @@
 		<label>Objekt_16</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -254,6 +270,7 @@
 		<label>Objekt_17</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -269,6 +286,7 @@
 		<label>Objekt_18</label>
 		<processtime>10</processtime>
 		<type>metal</type>
+		<price>1.50</price>
 		<speed>3</speed>
 		<view>
 			<image>metal.png</image>
@@ -285,6 +303,7 @@
 		<label>Objekt_19</label>
 		<processtime>10</processtime>
 		<type>wood</type>
+		<price>27.50</price>
 		<speed>3</speed>
 		<view>
 			<image>wood.png</image>
@@ -301,6 +320,7 @@
 		<processtime>10</processtime>
 		<type>metal</type>
 		<speed>3</speed>
+		<price>1.50</price>
 		<view>
 			<image>metal.png</image>
 		</view>

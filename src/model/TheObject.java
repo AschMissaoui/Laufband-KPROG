@@ -42,8 +42,10 @@ import controller.Simulation;
 		
 		/** the process time of the object*/
 		private int processTime;
-		
+		/* the type of the object*/
 		private String myType;
+		/* cost of the object*/
+	    private double price ;
 		
 		/** the speed of the object, the higher the lower */
 		private int mySpeed;
@@ -75,7 +77,7 @@ import controller.Simulation;
 		 * @param image image of the object
 		 * @param type of the object (Team15)
 		 */
-		private TheObject(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
+		private TheObject(double price ,String type, String label, ArrayList<String> stationsToGo, int processtime, int speed, int xPos, int yPos, String image){
 			super(label, xPos, yPos);
 			
 			//create the view
@@ -87,7 +89,7 @@ import controller.Simulation;
 			this.processTime = processtime;
 			this.mySpeed = speed;
 			this.myType = type;
-
+			this.price = price ;
 						
 			//the first station to go to is the start station
 			Station station = this.getNextStation();
@@ -108,9 +110,9 @@ import controller.Simulation;
 		 * @param yPos y position of the object
 		 * @param image image of the object
 		 */
-		public static void create(String type, String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
+		public static void create(double price ,String type, String label, ArrayList<String> stationsToGo, int processtime, int speed ,int xPos, int yPos, String image){
 				
-			new TheObject(type, label, stationsToGo, processtime, speed, xPos, yPos, image);
+			new TheObject(price ,type, label, stationsToGo, processtime, speed, xPos, yPos, image);
 
 				
 		}
@@ -158,13 +160,13 @@ import controller.Simulation;
 				if(getType(TYPE1)){
 				inQueues.get(0).offer(this);
 					numWood++;
-					FileInfo.updateBoughtWood();
+
 				}
 				
 				else if(getType(TYPE2)){
 					inQueues.get(1).offer(this);
 					numMetal++;
-					FileInfo.updateBoughtMetal();
+
 				}
 				else {
 					System.out.println("Wrong station.");
@@ -397,6 +399,12 @@ import controller.Simulation;
 			}
 			return false;
 		}
-		
+
+	/**
+	 * getter for price
+	 * @return price
+	 */
+	public double getPrice()	{return price;}
+
 	}
 	

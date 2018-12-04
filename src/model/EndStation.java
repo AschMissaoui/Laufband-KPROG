@@ -69,6 +69,7 @@ public class EndStation extends SimpleStation {
 			
 			//  this is a just for fun action, the object gets a new location, but CAUTION !!!! magic numbers :-( !!!!!!
 			theObject.theView.setLocation((this.getXPos() -100) + 18 * numberOfOutQueueObjects(), this.getYPos() + 120);
+
 					
 			//End the simulation if the condition is met
 			endSimulation();
@@ -97,11 +98,13 @@ public class EndStation extends SimpleStation {
 		for (Object object : this.outGoingQueue){
 			((TheObject) object).printStatistics();
 		}
-														
+
 		// end simulation 
-		// System.exit(0); 
+		// System.exit(0);
+			FileInfo.updateBoughtMaterial();
 												
 		}
+
 	}
 	
 	@Override

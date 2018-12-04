@@ -3,40 +3,75 @@
 	<station>
 		<label>WoodCutter</label>
 		<troughput>10</troughput>
-		<x_position>175</x_position>
+		<x_position>125</x_position>
 		<y_position>75</y_position>
 		<view>
 			<image>woodcutter.png</image>
 		</view>
 		<inqueue>
-			<x_position>220</x_position>
+			<x_position>170</x_position>
 			<y_position>40</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>220</x_position>
+			<x_position>170</x_position>
 			<y_position>190</y_position>
 		</outqueue>
 	</station>
 	<station>
+		<label>WoodCutter2</label>
+		<troughput>10</troughput>
+		<x_position>225</x_position>
+		<y_position>75</y_position>
+		<view>
+			<image>woodcutter.png</image>
+		</view>
+		<inqueue>
+			<x_position>270</x_position>
+			<y_position>40</y_position>
+		</inqueue>
+		<outqueue>
+			<x_position>270</x_position>
+			<y_position>190</y_position>
+		</outqueue>
+	</station>
+
+	<station>
+	<label>MetalCutter2</label>
+	<troughput>10</troughput>
+	<x_position>350</x_position>
+	<y_position>325</y_position>
+	<view>
+		<image>metalcutter.png</image>
+	</view>
+	<inqueue>
+		<x_position>400</x_position>
+		<y_position>290</y_position>
+	</inqueue>
+	<outqueue>
+		<x_position>400</x_position>
+		<y_position>430</y_position>
+	</outqueue>
+</station>
+	<station>
 		<label>MetalCutter</label>
 		<troughput>10</troughput>
-		<x_position>250</x_position>
+		<x_position>200</x_position>
 		<y_position>325</y_position>
 		<view>
 			<image>metalcutter.png</image>
 		</view>
 		<inqueue>
-			<x_position>300</x_position>
+			<x_position>250</x_position>
 			<y_position>290</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>300</x_position>
+			<x_position>250</x_position>
 			<y_position>430</y_position>
 		</outqueue>
 	</station>
 	<station>
 		<label>Assembly</label>
-		<troughput>400</troughput>
+		<troughput>10</troughput>
 		<x_position>475</x_position>
 		<y_position>150</y_position>
 		<view>

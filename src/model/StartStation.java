@@ -14,7 +14,9 @@ public class StartStation extends SimpleStation {
 						
 	/** instance of the start station */
 	private static StartStation theStartStation;
-	
+	/* counter for monety spent on material*/
+	public static double spent  ;
+
 	/** (private!) Constructor, creates a new start station
 	 * 
 	 * @param label of the station 
@@ -52,6 +54,7 @@ public class StartStation extends SimpleStation {
 				
 		//the object chooses an outgoing queue and enter it
 		theObject.enterOutQueue(this);
+		spent+=theObject.getPrice() ;
 		
 		//let the next objects start with a little delay
 		try {

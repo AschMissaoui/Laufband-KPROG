@@ -1,4 +1,5 @@
 package io;
+import model.*;
 import view.*;
 
 import java.io.FileNotFoundException;
@@ -7,12 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import model.EndStation;
-import model.ProcessStation;
-import model.StartStation;
-import model.SynchronizedQueue;
-import model.TheObject;
 
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -38,16 +33,16 @@ public class Factory {
 	public static  String CHOSEN_SCENARIO = null;
 	
 	/** the objects XML data file */
-	private static String theObjectDataFile = "xml/"+CHOSEN_SCENARIO+"/object.xml"; 
+	private static String theObjectDataFile ;
 	
 	/** the stations XML data file */
-	private static String theStationDataFile = "xml/"+CHOSEN_SCENARIO+"/station.xml"; 
+	private static String theStationDataFile ;
 	
 	/** the start station XML data file */
-	private static String theStartStationDataFile = "xml/"+CHOSEN_SCENARIO+"/startstation.xml"; 
+	private static String theStartStationDataFile;
 	
 	/** the end station XML data file */
-	private static String theEndStationDataFile = "xml/"+CHOSEN_SCENARIO+"/endstation.xml"; 
+	private static String theEndStationDataFile ;
 	
 	/** the x position of the starting station, also position for all starting objects */
 	private static int XPOS_STARTSTATION;
@@ -163,6 +158,7 @@ public class Factory {
     			int speed = 0;
     			String image = null;
     			String type = "";	//new type variable that was added
+				double price; // new variable for the cost
     			
 
     			    			
@@ -175,7 +171,7 @@ public class Factory {
         		Element viewGroup = theObject.getChild("view");
         		// read data
         		image = viewGroup.getChildText("image");
-        		
+        		price = Double.parseDouble(theObject.getChildText("price"));
         		type = theObject.getChildText("type");
         		System.out.println(label+"++++++++++++++++++++++++++"+type+"++++++++++++++++");
         		
@@ -196,7 +192,7 @@ public class Factory {
         		}
         	  		
         		//creating a new TheObject object
-        		TheObject.create(type, label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
+        		TheObject.create(price , type, label, stationsToGo, processtime, speed, XPOS_STARTSTATION, YPOS_STARTSTATION, image);
         		
 			}
     	
@@ -205,6 +201,7 @@ public class Factory {
 		} catch (IOException e) {
 				e.printStackTrace();
 		}
+
     }
     
     /**

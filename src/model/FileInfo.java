@@ -37,15 +37,17 @@ public class FileInfo {
     private int price ;
     private int customer ;
     private String name ;
+    private int bought ;
 
 
 
 
     public FileInfo(String name){
         this.name = name ;
-        int randomP = (int )(Math.random() * 5000 + 1);
+        int randomZahl = (int)( Math.random() * 5) + 35;
         int randomC = (int )(Math.random() * 500000 + 3000);
-        this.price = randomP ;
+        this.bought = randomZahl ;
+        this.price = randomZahl * 25 ;
         this.customer = randomC;
 
     }
@@ -66,31 +68,13 @@ public class FileInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        myCustomers = myCustomers + "\n"+  new Date() + " Customer " + myOrder.customer + " bought " + myOrder.price + "$ worth of Hammers." ;
+        myCustomers = myCustomers + "\n"+  new Date() + " Customer " + myOrder.customer + " paid " + myOrder.price + "$ for " + myOrder.bought + " Hammers." ;
         writer.print(myCustomers);
         writer.close();
     }
-    public static void updateBoughtMetal(){
-        FileInfo myOrder = new FileInfo("Material");
-        int randomWorth = (int )(Math.random() * 500000 + 300);
 
 
-        PrintWriter writer = null;
-        try {
-            /*new XML FIle*/
-            writer = new PrintWriter("log/DataLogMaterial.txt", StandardCharsets.UTF_8);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        myOrders = myOrders + "\n"+  new Date() + " Order number " + randomWorth + " of " + myOrder.price + "$ worth of Metal." ;
-        writer.print(myOrders);
-        writer.close();
-    }
-    public static void updateBoughtWood(){
+    public static void updateBoughtMaterial(){
         FileInfo myOrder = new FileInfo("Material");
         int randomWorth = (int )(Math.random() * 500000 + 300);
 
@@ -105,7 +89,7 @@ public class FileInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        myOrders = myOrders + "\n"+  new Date() + " Order number " + myOrder.customer + " of " + randomWorth + "$ worth of Wood." ;
+        myOrders = myOrders + "\n"+  new Date() + " spent  on Material : " + StartStation.spent  ;
         writer.print(myOrders);
         writer.close();
     }

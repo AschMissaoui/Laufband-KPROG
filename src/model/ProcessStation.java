@@ -11,9 +11,9 @@ import controller.Simulation;
  * @author Jaeger, Schmidt , edited by : team 15
  * @version 2018-11-28
  */
-public class ProcessStation extends Station {
+public final class ProcessStation extends Station {
     /** Max number of stations für Bonusaufgabe Singelton*/
-	public static int FreeStations = 5 ;
+	public static int FreeStations = 8 ;
 	/** a list of all incoming queues*/
 	private ArrayList<SynchronizedQueue> inComingQueues = new ArrayList<SynchronizedQueue>();
 	
@@ -243,9 +243,11 @@ public class ProcessStation extends Station {
 				{theObject.wait();} 
 				catch (InterruptedException e)	
 				{e.printStackTrace();}
+
 				
 				handleObject(theObject);
 			}
+
 		} else if (!(this.getLabel().equals("Assembly")))theObject.enterOutQueue(this);
 			
 		//just to see the view of the outgoing queue works
