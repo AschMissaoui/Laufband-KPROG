@@ -8,11 +8,11 @@
 			<image></image>
 		</view>
 		<inqueue>
-			<x_position>920</x_position>
+			<x_position>30000</x_position>
 			<y_position>560</y_position>
 		</inqueue>
 		<outqueue>
-			<x_position>920</x_position>
+			<x_position>30000</x_position>
 			<y_position>580</y_position>
 		</outqueue>
 	</end_station>

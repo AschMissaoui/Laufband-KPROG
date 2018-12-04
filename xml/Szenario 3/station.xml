@@ -65,11 +65,11 @@
 		</view>
 		<inqueue>
 			<x_position>720</x_position>
-			<y_position>260</y_position>
+			<y_position>240</y_position>
 		</inqueue>
 		<outqueue>
 			<x_position>720</x_position>
-			<y_position>380</y_position>
+			<y_position>385</y_position>
 		</outqueue>
 	</station>
 	

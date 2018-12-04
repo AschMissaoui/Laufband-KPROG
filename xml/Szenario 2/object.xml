@@ -46,7 +46,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>WoodCutter</station>
+			<station>WoodCutter2</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
 		</sequence>
@@ -62,7 +62,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>MetalCutter</station>
+			<station>MetalCutter2</station>
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>
@@ -112,7 +112,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>WoodCutter</station>
+			<station>WoodCutter2</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
 		</sequence>
@@ -128,7 +128,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>MetalCutter</station>
+			<station>MetalCutter2</station>
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>
@@ -178,7 +178,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>WoodCutter</station>
+			<station>WoodCutter2</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
 		</sequence>
@@ -194,7 +194,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>MetalCutter</station>
+			<station>MetalCutter2</station>
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>
@@ -244,7 +244,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>WoodCutter</station>
+			<station>WoodCutter2</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
 		</sequence>
@@ -260,7 +260,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>MetalCutter</station>
+			<station>MetalCutter2</station>
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>
@@ -310,7 +310,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>WoodCutter</station>
+			<station>WoodCutter2</station>
 			<station>Assembly</station>
 			<station>End_Station</station>
 		</sequence>
@@ -326,7 +326,7 @@
 		</view>
 		<sequence>
 			<station>Start_Station</station>
-			<station>MetalCutter</station>
+			<station>MetalCutter2</station>
 			<station>Assembly</station>
 			<station>Transport</station>
 			<station>End_Station</station>

@@ -15,7 +15,7 @@ import static org.testng.Assert.assertEquals;
  * tests XML file reading
  *
  * @author Team15
- * @version 1.0
+ * @version 28.11.2018
  */
 public class FactoryTest {
     private  List<Element> allObjects1 , allObjects2 , allObjects3;
@@ -57,7 +57,7 @@ public class FactoryTest {
     public void myXMLTest(){
         createLists();
       assertEquals(allObjects1.size() , 20);
-      assertEquals(allObjects2.size() , 23);
+      assertEquals(allObjects2.size() , 20);
       assertEquals(allObjects3.size() , 20);
 
     }

@@ -39,17 +39,17 @@
 	<label>MetalCutter2</label>
 	<troughput>10</troughput>
 	<x_position>350</x_position>
-	<y_position>325</y_position>
+	<y_position>425</y_position>
 	<view>
 		<image>metalcutter.png</image>
 	</view>
 	<inqueue>
 		<x_position>400</x_position>
-		<y_position>290</y_position>
+		<y_position>390</y_position>
 	</inqueue>
 	<outqueue>
 		<x_position>400</x_position>
-		<y_position>430</y_position>
+		<y_position>530</y_position>
 	</outqueue>
 </station>
 	<station>
@@ -100,11 +100,11 @@
 		</view>
 		<inqueue>
 			<x_position>720</x_position>
-			<y_position>260</y_position>
+			<y_position>240</y_position>
 		</inqueue>
 		<outqueue>
 			<x_position>720</x_position>
-			<y_position>380</y_position>
+			<y_position>385</y_position>
 		</outqueue>
 	</station>
 	
