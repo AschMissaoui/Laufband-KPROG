@@ -255,9 +255,9 @@ import controller.Simulation;
 				String image = "hammer.png";
 				ImageIcon imageIcon = new ImageIcon(image);
 				this.theView.setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
-				this.theView.setIcon(imageIcon);
-				numHammers ++ ;
-				FileInfo.updateSold();
+				this.theView.setIcon(imageIcon); // changes the icon
+				numHammers ++ ; // counter used for statistics
+				FileInfo.updateSold(); // update DataLogHammers.txt
 			}
 															
 			else if(station.label.equals("Assembly") && getType(TYPE2)) {

@@ -19,7 +19,6 @@ import static org.testng.Assert.assertEquals;
  */
 public class FactoryTest {
     private  List<Element> allObjects1 , allObjects2 , allObjects3;
-     private ArrayList<String> stationsToGo = new ArrayList<>();
 
     public void createLists(){
         //read the information from the XML file into a JDOM Document

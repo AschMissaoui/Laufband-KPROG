@@ -101,6 +101,7 @@ public class EndStation extends SimpleStation {
 
 		// end simulation 
 		// System.exit(0);
+			// updates the DataLogMaterial.txt file
 			FileInfo.updateBoughtMaterial();
 												
 		}

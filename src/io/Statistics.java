@@ -3,13 +3,6 @@ package io;
 import model.CustomPoint;
 import model.TheObject;
 import view.PlotterPane;
-import java.io.File;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-
-
-import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -43,13 +36,13 @@ public class Statistics {
 		System.out.println(message);
 	}
 
+	/**
+	 * draws the PlotterPane
+	 */
 	public static void drawStats() {
 		ArrayList<CustomPoint> points = new ArrayList<>();
 		int lastX = 0;
-
-
-
-
+		// creates a new PlotterPane
 		PlotterPane plotterPane = new PlotterPane(points,
 				500,
 				400,
@@ -60,6 +53,11 @@ public class Statistics {
 		updateGraph(plotterPane , lastX) ;
 	}
 
+	/**
+	 * updates graph by drawing a new point
+	 * @param p
+	 * @param x
+	 */
 	public static void updateGraph(PlotterPane p, int x){
 		try {
 			p.addPoint(new CustomPoint(x, TheObject.numHammers));

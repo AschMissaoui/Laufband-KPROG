@@ -57,11 +57,14 @@ public class FileInfo {
 
     }
 
+    /**
+     * a method for each produced/sold box of hammers
+     */
     public static void updateSold(){
         FileInfo myOrder = new FileInfo("Hammer");
 
 
-
+        // writer for the file DataLogHammers.txt
         PrintWriter writer = null;
         try {
             /*new XML file for BonusAufgabe*/
@@ -73,17 +76,21 @@ public class FileInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //updates the existing String : DataLogHammers.txt + new data
         myCustomers = myCustomers + "\n"+  new Date() + " Customer " + myOrder.customer + " paid " + myOrder.price + "$ for " + myOrder.bought + " Hammers." ;
         writer.print(myCustomers);
         writer.close();
     }
 
+    /**
+     * a method for bought material : metal + wood
+     */
 
     public static void updateBoughtMaterial(){
         FileInfo myOrder = new FileInfo("Material");
         int randomWorth = (int )(Math.random() * 500000 + 300);
 
-
+        // writer for DataLogMaterial.txt
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("log/DataLogMaterial.txt", StandardCharsets.UTF_8);
@@ -94,6 +101,7 @@ public class FileInfo {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        // updates the existing String : DataLogMaterial.txt + new data
         myOrders = myOrders + "\n"+  new Date() + " spent  on Material : " + StartStation.spent  ;
         writer.print(myOrders);
         writer.close();
