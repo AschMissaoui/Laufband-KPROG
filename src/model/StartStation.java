@@ -14,11 +14,11 @@ public class StartStation extends SimpleStation {
 						
 	/** instance of the start station */
 	private static StartStation theStartStation;
-	/* counter for monety spent on material*/
+	/* counter for money spent on material*/
 	public static double spent  ;
 
 	/** (private!) Constructor, creates a new start station
-	 * 
+	 *
 	 * @param label of the station 
 	 * @param inQueue the incoming queue
 	 * @param outQueue the outgoing queue

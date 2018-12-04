@@ -101,6 +101,7 @@ import controller.Simulation;
 		
 		/** Create a new object model
 		 *
+		 * @param price of the object
 		 * @param type of the object
 		 * @param label of the object 
 		 * @param stationsToGo the stations to go
@@ -155,7 +156,7 @@ import controller.Simulation;
 			/**
 			 * enterInQueue is EDITED by @author Team15
 			 */
-			//When materials enters the Assembly they would split in 2 Queues depending on image
+			//When materials enters the Assembly they would split in 2 Queues depending on type
 			else if(station.label.equals("Assembly")) {
 				if(getType(TYPE1)){
 				inQueues.get(0).offer(this);

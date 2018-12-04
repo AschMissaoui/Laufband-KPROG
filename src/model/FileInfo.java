@@ -34,13 +34,18 @@ public class FileInfo {
         }
     }
 
-    private int price ;
-    private int customer ;
-    private String name ;
-    private int bought ;
+    private int price ; // price of the object
+    private int customer ; // Customer ID
+    private String name ; // Customer name (nicht benutzt)
+    private int bought ; // money spent by Customer on order
 
 
 
+    /** (Constructor, creates the editor for the log
+     *
+     * @param name of the Customer (nicht benutzt)
+     *
+     */
 
     public FileInfo(String name){
         this.name = name ;
